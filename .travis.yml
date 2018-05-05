@@ -16,4 +16,4 @@ services:
 
 script:
 - vendor/bin/phpunit
-- php travis/coverage-checker.php travis/clover.xml 0
+- php travis/coverage-checker.php travis/clover.xml 5
