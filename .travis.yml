@@ -20,4 +20,4 @@ script:
   - mkdir -p build/logs
 
 after_success:
-  - travis_retry php vendor/bin/php-coveralls
+  - travis_retry php /svendor/bin/php-coveralls
