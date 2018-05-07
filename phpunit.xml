@@ -19,7 +19,7 @@
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./tests</directory>
+            <directory suffix=".php">/.</directory>
         </whitelist>
     </filter>
     <php>
@@ -31,6 +31,6 @@
         <env name="MAIL_DRIVER" value="array"/>
     </php>
     <logging>
-        <log type="coverage-clover" target="travis/clover.xml" />
+        <log type="coverage-clover" target="travis/clover.xml"/>
     </logging>
 </phpunit>
