@@ -17,7 +17,7 @@ services:
 script:
   - mkdir -p build/logs
   - php vendor/bin/phpunit -c phpunit.xml
-  - php coverage-checker.php clover.xml 75
+  - php ./travis/coverage-checker.php clover.xml 75
 
-after_script:
-  - php vendor/bin/coveralls -v
+#after_script:
+ # - php vendor/bin/coveralls -v
