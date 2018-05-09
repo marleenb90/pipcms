@@ -10,7 +10,7 @@
          stopOnFailure="false">
     <testsuites>
         <testsuite name="Infrastructure Test Suite">
-            <directory>src/PIPcmsCore/Infrastructure/Tests/</directory>
+            <directory>src/PIPcmsCore/Infrastructure/Tests</directory>
         </testsuite>
     </testsuites>
     <filter>
@@ -18,7 +18,7 @@
             <directory suffix=".php">./vendor</directory>
         </blacklist>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">*/Tests</directory>
+            <directory suffix=".php">src/PIPcmsCore/Infrastructure/Tests/</directory>
         </whitelist>
     </filter>
     <php>
