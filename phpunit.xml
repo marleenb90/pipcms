@@ -10,7 +10,7 @@
          stopOnFailure="false">
     <testsuites>
         <testsuite name="Infrastructure Test Suite">
-            <directory>./Infrastructure/Tests/</directory>
+            <directory>.src/PIPcmsCore/Infrastructure/Tests/</directory>
         </testsuite>
     </testsuites>
     <filter>
