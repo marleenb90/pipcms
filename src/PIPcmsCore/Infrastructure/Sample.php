@@ -6,7 +6,7 @@
  * Time: 21:47
  */
 
-namespace src\Infrastructure;
+namespace PIPcmsCore\Infrastructure;
 
 
 class Sample

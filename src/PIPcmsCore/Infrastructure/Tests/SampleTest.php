@@ -6,9 +6,9 @@
  * Time: 21:49
  */
 
-namespace src\Infrastructure\Tests;
+namespace Infrastructure\Tests;
 
-use src\Infrastructure\Sample;
+use PIPcmsCore\Infrastructure\Sample;
 use PHPUnit\Framework\TestCase;
 
 class SampleTest extends TestCase
