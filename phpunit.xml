@@ -20,6 +20,7 @@
         <whitelist>
             <exclude>
                 <directory suffix=".php">*/Tests</directory>
+            </exclude>
         </whitelist>
     </filter>
     <php>
