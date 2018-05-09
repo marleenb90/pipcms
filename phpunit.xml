@@ -17,11 +17,10 @@
         <blacklist>
             <directory suffix=".php">./vendor</directory>
         </blacklist>
-        <!--<whitelist>-->
-            <!--<exclude>-->
-                <!--<directory suffix=".php">./app</directory>-->
-            <!--</exclude>-->
-        <!--</whitelist>-->
+        <whitelist>
+            <exclude>
+                <directory suffix=".php">*/Tests</directory>
+        </whitelist>
     </filter>
     <php>
         <env name="APP_ENV" value="testing"/>
