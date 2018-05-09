@@ -10,7 +10,7 @@
          stopOnFailure="false">
     <testsuites>
         <testsuite name="Application Test Suite">
-            <directory>./app/tests/</directory>
+            <directory>./src/infrastructure/tests/</directory>
         </testsuite>
     </testsuites>
     <filter>
