@@ -2,10 +2,10 @@
 
 namespace Tests\Unit;
 
-use App\User;
+use App\Author;
 use Tests\TestCase;
 
-class UserTest extends TestCase
+class AuthorTest extends TestCase
 {
     /**
      * A basic test example.
@@ -14,7 +14,7 @@ class UserTest extends TestCase
      */
     public function testFillable()
     {
-        $author = new User(['name'=>'Karin Slaughter']);
+        $author = new Author(['name'=>'Karin Slaughter']);
         $this->assertEquals('Karin Slaughter', $author->name);
     }
 }
