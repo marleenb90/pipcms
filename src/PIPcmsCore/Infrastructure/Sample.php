@@ -18,5 +18,4 @@ class Sample
     {
         return 'hello';
     }
-
 }
