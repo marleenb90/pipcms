@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: marleen
- * Date: 10/05/2018
- * Time: 15:06
- */
 
 namespace src\PIPcmsCore\Infrastructure\Tests\Controllers;
 
