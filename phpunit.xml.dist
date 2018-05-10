@@ -20,7 +20,7 @@
         <blacklist>
             <directory suffix=".php">./vendor</directory>
         </blacklist>
-        <whitelist processUncoveredFilesFromWhitelist="true">
+        <whitelist>
             <directory suffix=".php">./src/PIPcmsCore/Infrastructure</directory>
             <directory suffix=".php">./src/PIPcmsCore/Domain</directory>
         </whitelist>
