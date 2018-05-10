@@ -25,27 +25,7 @@ class SampleTest extends TestCase
 
     public function testHello()
     {
-        $this->call('POST', '/', [
-            // some fields..
-        ]);
-        $this->assertViewIs('welcome');
-    }
-
-    /**
-     * Assert that the response view has a given name.
-     *
-     * @param  string $viewName
-     * @return void
-     */
-    public function assertViewIs($viewName)
-    {
-        $response = $this->client->getResponse();
-
-        if (!isset($response->original) || !$response->original instanceof View) {
-            return $this->assertTrue(false, 'The response was not a view.');
-        }
-
-        $this->assertEquals($viewName, $response->original->getName());
+        $this->assertEquals('hello', $this->sample->hello());
     }
 
 }

@@ -3,12 +3,13 @@
 namespace PIPcmsCore\Infrastructure\Controllers;
 
 use Illuminate\Routing\Controller;
+use View;
 
 class IndexController extends Controller
 {
     public function index()
     {
-        return view('welcome');
+        return View::make('welcome');
     }
 
 }

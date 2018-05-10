@@ -1,9 +1,16 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: marleen
+ * Date: 09/05/2018
+ * Time: 21:49
+ */
 
-namespace src\PIPcmsCore\Infrastructure\Tests\Controllers;
+namespace Infrastructure\Tests;
 
 use PIPcmsCore\Infrastructure\Controllers\IndexController;
 use Tests\TestCase;
+use View;
 
 class IndexControllerTest extends TestCase
 {
@@ -12,15 +19,29 @@ class IndexControllerTest extends TestCase
      */
     private $controller;
 
-    protected function setUp()
+    protected function setUp()/* The :void return type declaration that should be here would cause a BC issue */
     {
         $this->controller = new IndexController();
+        parent::setUp();
     }
 
-    public function testIndex()
+    public function testHello()
     {
-        //FIXME: test fixen
-        $this->assertTrue(true);
+        $this->call('GET', '/');
+        $this->assertViewIs('welcome');
+    }
+
+    /**
+     * Assert that the response view has a given name.
+     *
+     * @param  string $viewName
+     * @return void
+     */
+    public function assertViewIs($viewName)
+    {
+        $response = $this->controller->index();
+
+        $this->assertEquals($viewName, $response->getName());
     }
 
 }
