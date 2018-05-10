@@ -12,7 +12,7 @@
         <testsuite name="Infrastructure Test Suite">
             <directory>src/PIPcmsCore/Infrastructure/Tests</directory>
         </testsuite>
-        <testsuite name="Infrastructure Test Suite">
+        <testsuite name="Domain Test Suite">
             <directory>src/PIPcmsCore/Domain/Tests</directory>
         </testsuite>
     </testsuites>
@@ -21,8 +21,8 @@
             <directory suffix=".php">./vendor</directory>
         </blacklist>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">src/PIPcmsCore/Infrastructure/Tests/</directory>
-            <directory suffix=".php">src/PIPcmsCore/Domain/Tests/</directory>
+            <directory suffix=".php">src/PIPcmsCore/Infrastructure</directory>
+            <directory suffix=".php">src/PIPcmsCore/Domain</directory>
         </whitelist>
     </filter>
     <php>
