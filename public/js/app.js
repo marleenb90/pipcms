@@ -36313,19 +36313,59 @@ var Main = function (_Component) {
     function Main() {
         _classCallCheck(this, Main);
 
-        return _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).apply(this, arguments));
+        //Initialize the state in the constructor
+        var _this = _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).call(this));
+
+        _this.state = {
+            authors: []
+        };
+        return _this;
     }
+    /*componentDidMount() is a lifecycle method
+     * that gets called after the component is rendered
+     */
+
 
     _createClass(Main, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var _this2 = this;
+
+            /* fetch API in action */
+            fetch('/api/authors').then(function (response) {
+                return response.json();
+            }).then(function (authors) {
+                //Fetched product is stored in the state
+                _this2.setState({ authors: authors });
+            });
+        }
+    }, {
+        key: 'renderProducts',
+        value: function renderProducts() {
+            return this.state.authors.map(function (author) {
+                return (
+                    /* When using list you need to specify a key
+                     * attribute that is unique for each list item
+                    */
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'li',
+                        { key: author.id },
+                        author.name
+                    )
+                );
+            });
+        }
+    }, {
         key: 'render',
         value: function render() {
+            /* Some css code has been removed for brevity */
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 null,
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'h3',
+                    'ul',
                     null,
-                    'All Products'
+                    this.renderProducts()
                 )
             );
         }

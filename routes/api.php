@@ -16,3 +16,13 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('authors', 'Author@index');
+
+Route::get('authors/{author}', 'Author@show');
+
+Route::post('authors','Author@store');
+
+Route::put('authors/{author}','Author@update');
+
+Route::delete('authors/{author}', 'sAuthor@delete');
